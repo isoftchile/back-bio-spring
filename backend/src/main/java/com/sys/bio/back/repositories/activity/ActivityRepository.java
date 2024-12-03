@@ -1,7 +1,8 @@
 package com.sys.bio.back.repositories.activity;
 
+
 import com.sys.bio.back.models.activity.Activity;
-import com.sys.bio.back.models.cutting.CutType;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

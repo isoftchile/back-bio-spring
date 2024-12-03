@@ -1,8 +1,9 @@
 package com.sys.bio.back.repositories.cutting;
 
-import com.sys.bio.back.models.cutting.CutType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import com.sys.bio.back.cut.domain.models.CutType;
 
 import java.util.List;
 import java.util.Optional;

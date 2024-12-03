@@ -1,10 +1,10 @@
 package com.sys.bio.back.controllers.activity;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
+
 import com.sys.bio.back.models.activity.Activity;
-import com.sys.bio.back.models.cutting.CutType;
 import com.sys.bio.back.services.activity.ActivityService;
-import com.sys.bio.back.services.cutting.CutTypeService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

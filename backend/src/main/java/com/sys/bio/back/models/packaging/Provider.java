@@ -1,10 +1,7 @@
 package com.sys.bio.back.models.packaging;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sys.bio.back.models.activity.ExtraTask;
-import com.sys.bio.back.models.item.Product;
-import com.sys.bio.back.models.sized.SizedBox;
-import com.sys.bio.back.models.sized.Sizing;
+import com.sys.bio.back.product.domain.models.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

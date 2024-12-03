@@ -1,6 +1,6 @@
 package com.sys.bio.back.models.activity;
 
-import com.sys.bio.back.models.user.Responsible;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
@@ -19,7 +19,8 @@ public abstract class ExtraTask_ {
 	public static volatile SingularAttribute<ExtraTask, Double> totalTaskHours;
 	public static volatile SingularAttribute<ExtraTask, Activity> activity;
 	public static volatile SingularAttribute<ExtraTask, LocalTime> startTaskTime;
-	public static volatile SingularAttribute<ExtraTask, Responsible> responsible;
+	public static volatile SingularAttribute<ExtraTask, Cutting> cutting;
+	public static volatile SingularAttribute<ExtraTask, String> state;
 
 	public static final String EXTRA_TASK_ID = "extraTaskId";
 	public static final String DATE = "date";
@@ -28,7 +29,8 @@ public abstract class ExtraTask_ {
 	public static final String TOTAL_TASK_HOURS = "totalTaskHours";
 	public static final String ACTIVITY = "activity";
 	public static final String START_TASK_TIME = "startTaskTime";
-	public static final String RESPONSIBLE = "responsible";
+	public static final String CUTTING = "cutting";
+	public static final String STATE = "state";
 
 }
 

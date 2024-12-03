@@ -15,14 +15,13 @@ import java.awt.*;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
 public class SizedExporterPDF {
 
-    private List<SizedBox> sizedBoxList;
+    private final List<SizedBox> sizedBoxList;
 
     private void writeHeaderTable(PdfPTable table) {
         PdfPCell cell = new PdfPCell();

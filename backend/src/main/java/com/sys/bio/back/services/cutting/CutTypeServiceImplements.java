@@ -1,14 +1,13 @@
 package com.sys.bio.back.services.cutting;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.cutting.CutType;
+import com.sys.bio.back.cut.domain.models.CutType;
 import com.sys.bio.back.repositories.cutting.CutTypeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.OverridesAttribute;
 import java.util.*;
 
 @Service

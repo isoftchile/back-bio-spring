@@ -1,11 +1,11 @@
 package com.sys.bio.back.services.cutting;
 
 import com.sys.bio.back.criteria.CutBoxCriteria;
+import com.sys.bio.back.cut.domain.models.CutType_;
 import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.user.Responsible;
 import com.sys.bio.back.models.user.Responsible_;
 import com.sys.bio.back.models.cutting.CutBox_;
-import com.sys.bio.back.models.cutting.CutType_;
 import com.sys.bio.back.repositories.cutting.CutBoxRepository;
 import io.github.jhipster.service.QueryService;
 import io.github.jhipster.service.filter.LocalDateFilter;

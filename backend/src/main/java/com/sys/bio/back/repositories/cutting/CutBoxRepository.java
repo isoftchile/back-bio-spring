@@ -1,14 +1,13 @@
 package com.sys.bio.back.repositories.cutting;
 
-import com.sys.bio.back.models.cutting.CutBox;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
+import com.sys.bio.back.models.cutting.CutBox;
 
 public interface CutBoxRepository extends JpaRepository<CutBox, Long>,
         JpaSpecificationExecutor<CutBox> {

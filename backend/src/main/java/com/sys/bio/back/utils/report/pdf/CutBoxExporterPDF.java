@@ -5,9 +5,10 @@ import com.lowagie.text.Font;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
+import com.sys.bio.back.cut.domain.models.CutType;
 import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.user.Responsible;
-import com.sys.bio.back.models.cutting.CutType;
+
 import lombok.AllArgsConstructor;
 
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +23,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CutBoxExporterPDF {
 
-    private List<CutBox> cutBoxesList;
+    private final List<CutBox> cutBoxesList;
 
 
 

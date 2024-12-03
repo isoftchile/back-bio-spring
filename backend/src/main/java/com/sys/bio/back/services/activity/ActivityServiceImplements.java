@@ -2,9 +2,7 @@ package com.sys.bio.back.services.activity;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.activity.Activity;
-import com.sys.bio.back.models.cutting.CutType;
 import com.sys.bio.back.repositories.activity.ActivityRepository;
-import com.sys.bio.back.repositories.cutting.CutTypeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Service

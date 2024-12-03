@@ -1,9 +1,9 @@
 package com.sys.bio.back.services.cutting;
 
-import com.sys.bio.back.models.cutting.CutType;
-
 import java.util.List;
 import java.util.Set;
+
+import com.sys.bio.back.cut.domain.models.CutType;
 
 public interface CutTypeService {
 

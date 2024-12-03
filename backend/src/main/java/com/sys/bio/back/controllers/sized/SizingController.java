@@ -3,7 +3,7 @@ package com.sys.bio.back.controllers.sized;
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.criteria.SizedBoxCriteria;
 import com.sys.bio.back.criteria.SizingCriteria;
-import com.sys.bio.back.models.cutting.Cutting;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.dto.SearchSizedBoxDTO;
 import com.sys.bio.back.models.dto.SearchSizingDTO;
 import com.sys.bio.back.models.sized.SizedBox;

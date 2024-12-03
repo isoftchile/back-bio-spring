@@ -1,7 +1,6 @@
 package com.sys.bio.back.services.activity;
 
 import com.sys.bio.back.models.activity.Activity;
-import com.sys.bio.back.models.cutting.CutType;
 
 import java.util.List;
 import java.util.Set;

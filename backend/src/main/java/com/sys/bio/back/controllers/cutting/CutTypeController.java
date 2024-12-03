@@ -1,7 +1,7 @@
 package com.sys.bio.back.controllers.cutting;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.cutting.CutType;
+import com.sys.bio.back.cut.domain.models.CutType;
 import com.sys.bio.back.services.cutting.CutTypeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,25 +1,35 @@
 package com.sys.bio.back.services.cutting;
 
-import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.cutting.CutBox;
-import com.sys.bio.back.repositories.cutting.CutBoxRepository;
-import com.sys.bio.back.utils.date.DateUtils;
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.Date;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import java.time.LocalDate;
-import java.util.*;
+import com.sys.bio.back.controllers.user.AuthenticationController;
+import com.sys.bio.back.cut.app.out.CutRepository;
+import com.sys.bio.back.models.cutting.CutBox;
+import com.sys.bio.back.repositories.cutting.CutBoxRepository;
+import com.sys.bio.back.utils.date.DateUtils;
 
 @Service
 public class CutBoxServiceImplements implements CutBoxService {
 
     @Autowired
     private CutBoxRepository boxRepo;
+
+    @Autowired
+    private CutRepository cutRepo;
 
     @Autowired
     private EntityManager entityManager;
@@ -170,6 +180,8 @@ public class CutBoxServiceImplements implements CutBoxService {
     public Integer getTotalWeightForBiggyCutsByPreviousMonth() {
         return boxRepo.getTotalWeightForBiggyCutsByPreviousMonth();
     }
+
+    
 
 
 

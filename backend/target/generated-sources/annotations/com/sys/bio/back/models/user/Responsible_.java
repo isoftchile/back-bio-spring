@@ -1,8 +1,7 @@
 package com.sys.bio.back.models.user;
 
-import com.sys.bio.back.models.activity.ExtraTask;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.cutting.CutBox;
-import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.models.packaging.Packaging;
 import com.sys.bio.back.models.reception.Reception;
 import com.sys.bio.back.models.sized.SizedBox;
@@ -26,7 +25,6 @@ public abstract class Responsible_ {
 	public static volatile SingularAttribute<Responsible, Long> responsibleId;
 	public static volatile SingularAttribute<Responsible, String> email;
 	public static volatile SingularAttribute<Responsible, Boolean> enabled;
-	public static volatile SetAttribute<Responsible, ExtraTask> extraTasks;
 
 	public static final String CUTTINGS = "cuttings";
 	public static final String PACKAGINGS = "packagings";
@@ -38,7 +36,6 @@ public abstract class Responsible_ {
 	public static final String RESPONSIBLE_ID = "responsibleId";
 	public static final String EMAIL = "email";
 	public static final String ENABLED = "enabled";
-	public static final String EXTRA_TASKS = "extraTasks";
 
 }
 

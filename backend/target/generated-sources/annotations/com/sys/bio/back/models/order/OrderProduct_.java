@@ -1,6 +1,6 @@
 package com.sys.bio.back.models.order;
 
-import com.sys.bio.back.models.item.Product;
+import com.sys.bio.back.product.domain.models.Product;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;

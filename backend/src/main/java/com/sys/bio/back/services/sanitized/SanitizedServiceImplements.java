@@ -1,8 +1,6 @@
 package com.sys.bio.back.services.sanitized;
 
-import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.models.sanitized.Sanitized;
-import com.sys.bio.back.repositories.cutting.CuttingRepository;
 import com.sys.bio.back.repositories.sanitized.SanitizedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

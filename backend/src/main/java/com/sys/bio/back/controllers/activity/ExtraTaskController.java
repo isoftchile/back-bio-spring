@@ -2,11 +2,7 @@ package com.sys.bio.back.controllers.activity;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.activity.ExtraTask;
-import com.sys.bio.back.models.cutting.CutBox;
-import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.services.activity.ExtraTaskService;
-import com.sys.bio.back.services.cutting.CuttingService;
-import net.bytebuddy.asm.Advice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
@@ -75,6 +68,7 @@ public class ExtraTaskController {
         return new ResponseEntity<>(filteredExtraTasks, HttpStatus.OK);
     }
 
+    /*
     @GetMapping("/search")
     public ResponseEntity<List<ExtraTask>> searchByResponsibleName(
             @RequestParam(value = "name", required = false) String name) {
@@ -82,6 +76,7 @@ public class ExtraTaskController {
         return new ResponseEntity<>(extraTasks, HttpStatus.OK);
     }
 
+     */
     @PostMapping("/saveAllExtraTasks")
     public ResponseEntity<?> saveAllExtraTasks(@RequestBody List<ExtraTask> extraTasks) {
         try {

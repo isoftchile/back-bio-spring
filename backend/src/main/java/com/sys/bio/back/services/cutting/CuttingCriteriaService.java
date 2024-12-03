@@ -2,10 +2,13 @@ package com.sys.bio.back.services.cutting;
 
 import com.sys.bio.back.criteria.CutBoxCriteria;
 import com.sys.bio.back.criteria.CuttingCriteria;
+import com.sys.bio.back.cut.app.out.CutRepository;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.cutting.*;
 import com.sys.bio.back.models.user.Responsible_;
-import com.sys.bio.back.repositories.cutting.CuttingRepository;
+
 import io.github.jhipster.service.QueryService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -13,16 +16,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+import com.sys.bio.back.cut.domain.models.Cutting_;
+
 @Service
 @Transactional(readOnly = true)
 public class CuttingCriteriaService extends QueryService<Cutting> {
 
     @Autowired
-    CuttingRepository cuttingRepo;
+    CutRepository cutRepo;
 
     public List<Cutting> findByCriteria(CuttingCriteria cuttingCriteria) {
         final Specification<Cutting> specification = createSpecification(cuttingCriteria);
-        List<Cutting> cuttings = cuttingRepo.findAll(specification);
+        List<Cutting> cuttings = cutRepo.findAll(specification);
         return cuttings;
     }
 

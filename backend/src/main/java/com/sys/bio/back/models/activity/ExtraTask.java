@@ -2,6 +2,7 @@ package com.sys.bio.back.models.activity;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.user.Responsible;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,8 +29,8 @@ public class ExtraTask {
     private Long extraTaskId;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonProperty("responsible")
-    private Responsible responsible;
+    @JsonProperty("cutting")
+    private Cutting cutting;
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonProperty("activity")
     private Activity activity;
@@ -42,4 +43,5 @@ public class ExtraTask {
 
     private LocalTime endTaskTime;
     private Double totalTaskHours;
+    private String state;
 }

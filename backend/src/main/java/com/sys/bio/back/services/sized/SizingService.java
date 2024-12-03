@@ -1,6 +1,5 @@
 package com.sys.bio.back.services.sized;
 
-import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.models.sized.Sizing;
 
 import java.util.Set;

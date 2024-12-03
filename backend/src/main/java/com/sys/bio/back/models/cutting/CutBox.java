@@ -1,6 +1,8 @@
 package com.sys.bio.back.models.cutting;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sys.bio.back.cut.domain.models.CutType;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.user.Responsible;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

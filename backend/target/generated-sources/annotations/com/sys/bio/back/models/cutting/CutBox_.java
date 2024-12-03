@@ -1,5 +1,7 @@
 package com.sys.bio.back.models.cutting;
 
+import com.sys.bio.back.cut.domain.models.CutType;
+import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.user.Responsible;
 import java.time.LocalDate;
 import java.time.LocalTime;

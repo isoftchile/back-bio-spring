@@ -21,9 +21,9 @@ import java.util.List;
 @AllArgsConstructor
 public class CutBoxExporterExcel {
 
-    private XSSFWorkbook book;
-    private XSSFSheet sheet;
-    private List<CutBox> cutBoxList;
+    private final XSSFWorkbook book;
+    private final XSSFSheet sheet;
+    private final List<CutBox> cutBoxList;
 
     public CutBoxExporterExcel(List<CutBox> filteredCutBoxes) {
         this.cutBoxList = filteredCutBoxes;

@@ -1,10 +1,10 @@
 package com.sys.bio.back.services.cutting;
 
-import com.sys.bio.back.models.cutting.CutBox;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
+import com.sys.bio.back.models.cutting.CutBox;
 
 public interface CutBoxService {
 
@@ -49,6 +49,11 @@ public interface CutBoxService {
     Integer getTotalWeightForMiniCutsByPreviousMonth();
     Integer getTotalWeightForStandardCutsByPreviousMonth();
     Integer getTotalWeightForBiggyCutsByPreviousMonth();
+
+    
+
+
+    
 
 
 

@@ -14,17 +14,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
 public class SizedExporterExcel {
 
-    private XSSFWorkbook book;
-    private XSSFSheet sheet;
+    private final XSSFWorkbook book;
+    private final XSSFSheet sheet;
 
-    private List<SizedBox> sizedBoxList;
+    private final List<SizedBox> sizedBoxList;
 
     public SizedExporterExcel(List<SizedBox> filteredSizedBoxes) {
         this.sizedBoxList = filteredSizedBoxes;
@@ -125,9 +124,8 @@ public class SizedExporterExcel {
     public void export(HttpServletResponse response) throws IOException {
         writeHeaderTable();
         writeTableData();
-        ServletOutputStream outputStream = response.getOutputStream();
-        book.write(outputStream);
-        book.close();
-        outputStream.close();
+        try (ServletOutputStream outputStream = response.getOutputStream(); book) {
+            book.write(outputStream);
+        }
     }
 }

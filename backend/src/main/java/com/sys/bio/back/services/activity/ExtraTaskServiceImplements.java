@@ -1,9 +1,7 @@
 package com.sys.bio.back.services.activity;
 
 import com.sys.bio.back.models.activity.ExtraTask;
-import com.sys.bio.back.models.cutting.Cutting;
 import com.sys.bio.back.repositories.activity.ExtraTaskRepository;
-import com.sys.bio.back.repositories.cutting.CuttingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +44,7 @@ public class ExtraTaskServiceImplements implements ExtraTaskService {
     public List<ExtraTask> getExtraTasksByDateRange(Date startDate, Date endDate) {
         return taskRepo.findByDateBetween(startDate, endDate);
     }
-
+/*
     @Override
     public List<ExtraTask> searchByResponsibleName(String name) {
         if (name != null) {
@@ -55,6 +53,8 @@ public class ExtraTaskServiceImplements implements ExtraTaskService {
             return Collections.emptyList();
         }
     }
+
+ */
 
     @Override
     public void saveAll(List<ExtraTask> extraTasks) { taskRepo.saveAll(extraTasks); }
