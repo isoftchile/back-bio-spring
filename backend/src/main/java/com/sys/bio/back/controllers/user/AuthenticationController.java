@@ -1,14 +1,8 @@
 package com.sys.bio.back.controllers.user;
 
 // IMPORTS
-import com.sys.bio.back.infra.exceptions.UserDisabledException;
-import com.sys.bio.back.infra.exceptions.UserNotFoundException;
-import com.sys.bio.back.models.user.User;
-import com.sys.bio.back.infra.security.JwtToken.JwtRequest;
-import com.sys.bio.back.infra.security.JwtToken.JwtResponse;
-import com.sys.bio.back.infra.security.JwtToken.JwtUtils;
-import com.sys.bio.back.services.user.UserService;
-import com.sys.bio.back.services.user.UserDetailsServiceImpl;
+import java.security.Principal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +13,26 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.security.Principal;
+import com.sys.bio.back.infra.exceptions.UserDisabledException;
+import com.sys.bio.back.infra.exceptions.UserNotFoundException;
+import com.sys.bio.back.infra.security.JwtToken.JwtRequest;
+import com.sys.bio.back.infra.security.JwtToken.JwtResponse;
+import com.sys.bio.back.infra.security.JwtToken.JwtUtils;
+import com.sys.bio.back.models.user.User;
+import com.sys.bio.back.services.user.UserDetailsServiceImpl;
+import com.sys.bio.back.services.user.UserService;
 
 @RestController
-@CrossOrigin(origins = "https://softbio.cl")
+@CrossOrigin(origins = {
+    "https://www.softbio.cl",
+    "https://softbio.cl"
+    })
 public class AuthenticationController {
 
     @Autowired

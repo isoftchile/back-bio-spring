@@ -1,26 +1,44 @@
 package com.sys.bio.back.controllers.user;
 
-import com.sys.bio.back.models.user.Role;
-import com.sys.bio.back.models.user.User;
-import com.sys.bio.back.models.user.UserRole;
-import com.sys.bio.back.repositories.user.UserRepository;
-import com.sys.bio.back.services.user.UserService;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
-import java.util.*;
+import com.sys.bio.back.models.user.Role;
+import com.sys.bio.back.models.user.User;
+import com.sys.bio.back.models.user.UserRole;
+import com.sys.bio.back.repositories.user.UserRepository;
+import com.sys.bio.back.services.user.UserService;
 
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+    "https://softbio.cl", 
+    "https://www.softbio.cl"
+})
 public class UserController {
 
     @Autowired
