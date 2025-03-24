@@ -1,10 +1,7 @@
 package com.sys.bio.back.services.cutting;
-
-import com.sys.bio.back.criteria.CutBoxCriteria;
 import com.sys.bio.back.criteria.CuttingCriteria;
 import com.sys.bio.back.cut.app.out.CutRepository;
 import com.sys.bio.back.cut.domain.models.Cutting;
-import com.sys.bio.back.models.cutting.*;
 import com.sys.bio.back.models.user.Responsible_;
 
 import io.github.jhipster.service.QueryService;

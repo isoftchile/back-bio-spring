@@ -7,7 +7,6 @@ import com.sys.bio.back.models.cutting.CutBox;
 import com.sys.bio.back.models.dto.SearchCutBoxDTO;
 import com.sys.bio.back.services.cutting.CutBoxCriteriaService;
 import com.sys.bio.back.services.cutting.CutBoxService;
-import com.sys.bio.back.services.cutting.CutTypeService;
 import com.sys.bio.back.utils.report.excel.CutBoxExporterExcel;
 import com.sys.bio.back.utils.report.pdf.CutBoxExporterPDF;
 import io.github.jhipster.service.filter.DoubleFilter;
@@ -37,9 +36,6 @@ public class CutBoxController {
 
     @Autowired
     private CutBoxService boxService;
-
-    @Autowired
-    private CutTypeService typeService;
 
     @Autowired
     private CutBoxCriteriaService criteriaService;
@@ -159,7 +155,7 @@ public class CutBoxController {
     public ResponseEntity<List<CutBox>> list(@RequestBody SearchCutBoxDTO searchDTO) {
         CutBoxCriteria cutBoxCriteria = createCriteria(searchDTO);
         List<CutBox> list = criteriaService.findByCriteria(cutBoxCriteria);
-        return new ResponseEntity<List<CutBox>>(list, HttpStatus.OK);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     private CutBoxCriteria createCriteria(SearchCutBoxDTO dto) {

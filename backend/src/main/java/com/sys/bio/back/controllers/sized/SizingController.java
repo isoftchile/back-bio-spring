@@ -1,14 +1,9 @@
 package com.sys.bio.back.controllers.sized;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.criteria.SizedBoxCriteria;
 import com.sys.bio.back.criteria.SizingCriteria;
-import com.sys.bio.back.cut.domain.models.Cutting;
-import com.sys.bio.back.models.dto.SearchSizedBoxDTO;
 import com.sys.bio.back.models.dto.SearchSizingDTO;
-import com.sys.bio.back.models.sized.SizedBox;
 import com.sys.bio.back.models.sized.Sizing;
-import com.sys.bio.back.services.sized.SizedBoxCriteriaService;
 import com.sys.bio.back.services.sized.SizingCriteriaService;
 import com.sys.bio.back.services.sized.SizingService;
 import io.github.jhipster.service.filter.IntegerFilter;
@@ -75,7 +70,7 @@ public class SizingController {
     public ResponseEntity<List<Sizing>> list(@RequestBody SearchSizingDTO searchDTO) {
         SizingCriteria sizingCriteria = createCriteria(searchDTO);
         List<Sizing> list = criteriaService.findByCriteria(sizingCriteria);
-        return new ResponseEntity<List<Sizing>>(list, HttpStatus.OK);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     private SizingCriteria createCriteria(SearchSizingDTO dto) {

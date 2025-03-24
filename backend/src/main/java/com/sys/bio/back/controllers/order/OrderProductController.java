@@ -1,10 +1,7 @@
 package com.sys.bio.back.controllers.order;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
-import com.sys.bio.back.models.cutting.CutBox;
-import com.sys.bio.back.models.order.Order;
 import com.sys.bio.back.models.order.OrderProduct;
-import com.sys.bio.back.models.packaging.Package;
 import com.sys.bio.back.services.order.OrderProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/orderProducts")
@@ -66,7 +62,7 @@ public class OrderProductController {
     @GetMapping("/list")
     public ResponseEntity<List<OrderProduct>> list() {
         List<OrderProduct> list = orderProductService.findAll();
-        return new ResponseEntity<List<OrderProduct>>(list, HttpStatus.OK);
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     @PostMapping("/saveAll")

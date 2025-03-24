@@ -2,9 +2,7 @@ package com.sys.bio.back.controllers.notification;
 
 import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.notifications.Notification;
-import com.sys.bio.back.models.packaging.BoxName;
 import com.sys.bio.back.services.notifications.NotificationService;
-import com.sys.bio.back.services.notifications.NotificationServiceImplements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
