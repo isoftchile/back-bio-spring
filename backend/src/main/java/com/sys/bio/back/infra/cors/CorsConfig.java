@@ -17,6 +17,8 @@ public class CorsConfig {
         config.setAllowCredentials(true);
         config.addAllowedOrigin("https://www.softbio.cl");
         //config.addAllowedOrigin("http://localhost:4200");
+        config.addExposedHeader("Authorization");
+        config.addExposedHeader("Access-Control-Allow-Origin");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
