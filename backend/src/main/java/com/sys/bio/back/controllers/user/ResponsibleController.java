@@ -1,6 +1,5 @@
 package com.sys.bio.back.controllers.user;
 
-import com.sys.bio.back.controllers.user.AuthenticationController;
 import com.sys.bio.back.models.user.Responsible;
 import com.sys.bio.back.services.user.ResponsibleService;
 import org.slf4j.Logger;

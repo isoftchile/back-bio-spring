@@ -3,10 +3,8 @@ package com.sys.bio.back.services.user;
 import com.sys.bio.back.infra.exceptions.UserNotFoundException;
 import com.sys.bio.back.models.user.User;
 import com.sys.bio.back.models.user.UserRole;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
 import java.util.Set;
 
 public interface UserService {

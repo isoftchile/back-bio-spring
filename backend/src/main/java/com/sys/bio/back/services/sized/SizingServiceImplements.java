@@ -1,6 +1,5 @@
 package com.sys.bio.back.services.sized;
 
-import com.sys.bio.back.cut.domain.models.Cutting;
 import com.sys.bio.back.models.sized.Sizing;
 import com.sys.bio.back.repositories.sized.SizingRepository;
 import org.springframework.beans.factory.annotation.Autowired;

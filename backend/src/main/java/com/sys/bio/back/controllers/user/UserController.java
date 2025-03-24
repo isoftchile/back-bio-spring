@@ -35,7 +35,7 @@ import com.sys.bio.back.services.user.UserService;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins = "https://www.softbio.cl")
+@CrossOrigin("*")
 public class UserController {
 
     @Autowired

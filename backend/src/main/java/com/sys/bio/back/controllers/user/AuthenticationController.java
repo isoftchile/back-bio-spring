@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sys.bio.back.infra.exceptions.UserDisabledException;
@@ -30,9 +29,7 @@ import com.sys.bio.back.services.user.UserDetailsServiceImpl;
 import com.sys.bio.back.services.user.UserService;
 
 @RestController
-@CrossOrigin(origins = {"https://www.softbio.cl"}, 
-             allowedHeaders = "*", 
-             methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+@CrossOrigin("*")
 public class AuthenticationController {
 
     @Autowired

@@ -14,9 +14,9 @@ public class CorsConfig {
         System.out.println("Configuracion CORS cargada correctamente.");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://www.softbio.cl");
+        config.addAllowedOrigin("https://softbio.cl");
         //config.addAllowedOrigin("http://localhost:4200");
+        config.setAllowCredentials(true);
         config.addAllowedMethod("GET");
         config.addAllowedMethod("POST");
         config.addAllowedMethod("PUT");
