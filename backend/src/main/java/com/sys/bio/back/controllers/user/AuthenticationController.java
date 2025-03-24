@@ -30,7 +30,7 @@ import com.sys.bio.back.services.user.UserDetailsServiceImpl;
 import com.sys.bio.back.services.user.UserService;
 
 @RestController
-@CrossOrigin(origins = {"https://www.softbio.cl", "https://softbio.cl"}, 
+@CrossOrigin(origins = {"https://www.softbio.cl"}, 
              allowedHeaders = "*", 
              methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class AuthenticationController {
